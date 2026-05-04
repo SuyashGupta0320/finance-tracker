@@ -8,6 +8,8 @@ A digital goods reseller hired me to build a private internal dashboard to track
 
 The deliverable was a live dashboard that pulls from all four sources automatically, reconciles the data, and shows accurate P&L with charts, filters, and per-product breakdowns.
 
+<img width="1853" height="952" alt="Dashboard overview showing revenue charts and P&L summary" src="https://github.com/user-attachments/assets/32d13bb9-af8f-407a-b4f9-7441bdcc36f8" />
+
 ---
 
 ## The Interesting Problems
@@ -29,6 +31,8 @@ Full re-syncing thousands of historical records on every run would be too slow. 
 **Timezone-aware reporting**
 
 The database stores everything in UTC, but the client wants "today's revenue" to mean their local day - not UTC midnight. Every chart request sends the browser's timezone offset, and the backend uses it to bucket data correctly. Small detail, but without it the daily charts would be wrong for anyone not in UTC.
+
+<img width="1852" height="954" alt="Transaction list with filters and per-sale fee breakdown" src="https://github.com/user-attachments/assets/d6173d35-6b9a-4a1c-9f5c-a28cc70dd754" />
 
 ---
 
